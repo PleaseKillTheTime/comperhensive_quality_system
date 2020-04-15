@@ -21,12 +21,12 @@ public class BaseController {
         if(ex instanceof BusinessException){
             BusinessException businessException =(BusinessException) ex;
             responesData.put("errorCode",businessException.getErrorCode());
-            responesData.put("errorMsg",businessException.getErrorMsg());
-        }else {
-            responesData.put("errorCode", EmBusinessError.UNKNOW_ERROR.getErrorCode());
-            responesData.put("errorMsg",EmBusinessError.UNKNOW_ERROR.getErrorMsg());
-
-        }
+            responesData.put("errorMsg",businessException.getErrorMsg());}
+//        }else {
+//            responesData.put("errorCode", EmBusinessError.UNKNOW_ERROR.getErrorCode());
+//            responesData.put("errorMsg",EmBusinessError.UNKNOW_ERROR.getErrorMsg());
+//
+//        }
         return CommonReturnType.creat(responesData,"fail");
     }
 }

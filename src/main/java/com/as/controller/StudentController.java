@@ -2,15 +2,14 @@ package com.as.controller;
 
 import com.as.response.CommonReturnType;
 import exception.BusinessException;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-@Controller("user")
-@RequestMapping("/user")
-public class UserController  {
-
-    @RequestMapping(value = "/login")
+@Controller("student")
+@RequestMapping("/student")
+public class StudentController {
+    @RequestMapping(value = "/")
     @ResponseBody
     public CommonReturnType login(/*@RequestBody Users user*/) throws BusinessException {
 //        String name = user.getName();
@@ -28,5 +27,4 @@ public class UserController  {
 //        return  CommonReturnType.creat(result);
         return  CommonReturnType.creat(null);
     }
-
 }

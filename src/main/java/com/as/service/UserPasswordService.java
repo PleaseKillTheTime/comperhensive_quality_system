@@ -1,9 +1,8 @@
-package com.as.dao;
+package com.as.service;
 
 import com.as.dataobject.UserPassword;
 
-public interface UserPasswordMapper {
-
+public interface UserPasswordService {
     int deleteByPrimaryKey(Integer id);
     int insert(UserPassword record);
     int insertSelective(UserPassword record);
