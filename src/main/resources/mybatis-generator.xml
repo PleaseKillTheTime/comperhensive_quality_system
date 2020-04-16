@@ -31,7 +31,21 @@
         </javaClientGenerator>
 
         <!--生成对应表及类名-->
-        <table tableName="user_password" domainObjectName="UserPassword"
+        <table tableName="student" domainObjectName="Student"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="manager" domainObjectName="Manager"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="teacher" domainObjectName="Teacher"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"

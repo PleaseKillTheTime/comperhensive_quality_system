@@ -7,7 +7,7 @@ public interface UserPasswordService {
     int insert(UserPassword record);
     int insertSelective(UserPassword record);
     UserPassword selectByPrimaryKey(Integer id);
-    UserPassword selectByUserID(String userId);
+    UserPassword selectByUserId(String userId);
     int updateByPrimaryKeySelective(UserPassword record);
     int updateByPrimaryKey(UserPassword record);
 }

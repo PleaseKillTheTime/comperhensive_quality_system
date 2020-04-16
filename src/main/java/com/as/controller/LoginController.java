@@ -39,7 +39,7 @@ public class LoginController {
                 org.apache.commons.lang3.StringUtils.isEmpty(password)){
             throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);
         }
-        UserPassword userPassword = userPasswordService.selectByUserID(userId);
+        UserPassword userPassword = userPasswordService.selectByUserId(userId);
         if (password.equals(userPassword.getPassword())){
             //一会儿要返回对象（学生or老师or管理员）
             //前端根据返回的信息进入不同的界面]
