@@ -11,10 +11,7 @@ import java.util.List;
 public class StudentServiceImpl implements  StudentService {
     @Autowired
     StudentMapper studentMapper;
-    @Override
-    public int deleteByPrimaryKey(Integer id) {
-        return studentMapper.deleteByPrimaryKey(id);
-    }
+
 
     @Override
     public int insert(Student record) {
@@ -26,10 +23,7 @@ public class StudentServiceImpl implements  StudentService {
         return studentMapper.insert(record);
     }
 
-    @Override
-    public Student selectByPrimaryKey(Integer id) {
-        return studentMapper.selectByPrimaryKey(id);
-    }
+
 
     @Override
     public List<Student> selectAllStudents() {
