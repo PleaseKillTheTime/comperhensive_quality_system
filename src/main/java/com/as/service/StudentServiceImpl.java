@@ -31,9 +31,11 @@ public class StudentServiceImpl implements  StudentService {
     }
 
     @Override
-    public Student selectBySid(String Sid) {
-        return studentMapper.selectBySid(Sid);
+    public int deleteByPrimaryKey(String sid) {
+       return studentMapper.deleteByPrimaryKey(sid);
     }
+
+
 
     @Override
     public int updateByPrimaryKeySelective(Student record) {

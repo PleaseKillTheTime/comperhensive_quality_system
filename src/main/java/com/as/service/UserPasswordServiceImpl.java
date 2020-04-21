@@ -10,7 +10,7 @@ public class UserPasswordServiceImpl implements  UserPasswordService {
     @Autowired
     UserPasswordMapper userPasswordMapper;
     @Override
-    public int deleteByPrimaryKey(Integer id) {
+    public int deleteByPrimaryKey(String id) {
         return userPasswordMapper.deleteByPrimaryKey(id);
     }
 
@@ -25,15 +25,11 @@ public class UserPasswordServiceImpl implements  UserPasswordService {
     }
 
     @Override
-    public UserPassword selectByPrimaryKey(Integer id) {
+    public UserPassword selectByPrimaryKey(String id) {
         return userPasswordMapper.selectByPrimaryKey(id);
     }
 
-    @Override
-    public UserPassword selectByUserId(String userId) {
-        return userPasswordMapper.selectByUserId(userId);
 
-    }
 
     @Override
     public int updateByPrimaryKeySelective(UserPassword record) {

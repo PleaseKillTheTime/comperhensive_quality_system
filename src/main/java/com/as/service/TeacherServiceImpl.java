@@ -5,12 +5,14 @@ import com.as.dataobject.Teacher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class TeacherServiceImpl implements TeacherService {
     @Autowired
     TeacherMapper teacherMapper;
     @Override
-    public int deleteByPrimaryKey(Integer id) {
+    public int deleteByPrimaryKey(String id) {
         return teacherMapper.deleteByPrimaryKey(id);
     }
 
@@ -25,14 +27,15 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public Teacher selectByPrimaryKey(Integer id) {
+    public Teacher selectByPrimaryKey(String id) {
         return teacherMapper.selectByPrimaryKey(id);
     }
 
     @Override
-    public Teacher selectByTid(String Tid) {
-        return teacherMapper.selectByTid(Tid);
+    public List<Teacher> getAllTeachers() {
+        return teacherMapper.getAllTeachers();
     }
+
 
     @Override
     public int updateByPrimaryKeySelective(Teacher record) {

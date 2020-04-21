@@ -10,7 +10,7 @@ public interface StudentService {
     int insertSelective(Student record);
 
     List<Student> selectAllStudents();
-    Student selectBySid(String Sid);
+    int deleteByPrimaryKey(String sid);
     int updateByPrimaryKeySelective(Student record);
     int updateByPrimaryKey(Student record);
 }
