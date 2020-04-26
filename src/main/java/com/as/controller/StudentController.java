@@ -67,4 +67,10 @@ public class StudentController {
 
         return "delete success";
     }
+    //selectNameBySid
+    @RequestMapping(value = "/selectNameBySid", method = RequestMethod.GET)
+    @ResponseBody
+    public String selectNameBySid(String sid) {
+           return studentService.selectNameBySid(sid);
+    }
 }

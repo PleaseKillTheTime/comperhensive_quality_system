@@ -1,19 +1,15 @@
-package com.as.dao;
+package com.as.service;
 
 import com.as.dataobject.Questionnaire;
-import com.as.dataobject.QuestionnaireScores;
 
 import java.util.List;
 
-public interface QuestionnaireMapper {
-
+public interface QuestionnaireService {
     int deleteByPrimaryKey(int qid);
     List<Questionnaire> getAllQuestionnaire();
-
     int insert(Questionnaire record);
     int insertSelective(Questionnaire record);
     Questionnaire selectByPrimaryKey(Integer qid);
     int updateByPrimaryKeySelective(Questionnaire record);
     int updateByPrimaryKey(Questionnaire record);
-
 }

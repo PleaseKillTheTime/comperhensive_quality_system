@@ -195,5 +195,21 @@
     where isdelete='0'
 
   </select>
+  <select id="selectSidsByMajorAndClazz" resultType="String">
+    select
+    sid
+    from student
+    where major = #{major} and clazz = #{clazz} and isdelete='0'
+
+  </select>
+  <select id="selectNameBySid" resultType="String">
+    select
+    name
+    from student
+    where Sid = #{sid} and isdelete='0'
+
+  </select>
+
+
 
 </mapper>

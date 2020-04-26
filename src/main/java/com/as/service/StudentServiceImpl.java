@@ -23,6 +23,10 @@ public class StudentServiceImpl implements  StudentService {
         return studentMapper.insert(record);
     }
 
+    @Override
+    public String selectNameBySid(String sid) {
+        return studentMapper.selectNameBySid(sid);
+    }
 
 
     @Override

@@ -8,7 +8,7 @@ public interface StudentService {
 
     int insert(Student record);
     int insertSelective(Student record);
-
+    String selectNameBySid(String sid);
     List<Student> selectAllStudents();
     int deleteByPrimaryKey(String sid);
     int updateByPrimaryKeySelective(Student record);
